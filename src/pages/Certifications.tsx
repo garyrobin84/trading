@@ -131,7 +131,7 @@ image: "https://images.pexels.com/photos/6781341/pexels-photo-6781341.jpeg?auto=
 // Student Certifications (50 images)
 const studentCertifications = Array.from({ length: 50 }, (_, index) => ({
 id: index + 1,
-studentName: Student ${index + 1},
+studentName: Student ${index + 1}
 firm: ["FTMO", "MyForexFunds", "The5%ers", "TopstepTrader", "Apex Trader Funding", "Earn2Trade", "SurgeTrader", "FundedNext"][index % 8],
 amount: ["$25,000", "$50,000", "$100,000", "$200,000"][index % 4],
 date: 2023-${String(Math.floor(Math.random() * 12) + 1).padStart(2, '0')}-${String(Math.floor(Math.random() * 28) + 1).padStart(2, '0')},
