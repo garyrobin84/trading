@@ -18,6 +18,7 @@ import EducationalBlog from './pages/EducationalBlog';
 import TradingStrategies from './pages/TradingStrategies';
 import RiskManagement from './pages/RiskManagement';
 import Certifications from './pages/Certifications';
+import DailyTradingSignals from './pages/DailyTradingSignals';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Refund from './pages/Refund';
@@ -45,6 +46,7 @@ function App() {
             <Route path="/trading-strategies" element={<TradingStrategies />} />
             <Route path="/risk-management" element={<RiskManagement />} />
             <Route path="/certifications" element={<Certifications />} />
+            <Route path="/daily-trading-signals" element={<DailyTradingSignals />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/refund" element={<Refund />} />

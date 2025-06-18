@@ -22,6 +22,7 @@ const Header = () => {
 
   const servicesDropdownItems = [
     { name: 'All Services', path: '/services' },
+    { name: 'Daily Trading Signals', path: '/daily-trading-signals' },
     { name: 'Market Analysis Tools', path: '/market-analysis' },
     { name: 'Trading Calculators', path: '/trading-calculators' },
     { name: 'Trading Strategies', path: '/trading-strategies' },
@@ -69,22 +70,22 @@ const Header = () => {
           
           {/* Services Dropdown */}
           <div 
-            className="relative"
+            className="relative group"
             onMouseEnter={() => setIsServicesOpen(true)}
             onMouseLeave={() => setIsServicesOpen(false)}
           >
-            <button className="font-medium text-gray-800 hover:text-blue-900 transition-colors flex items-center">
+            <button className="font-medium text-gray-800 hover:text-blue-900 transition-colors flex items-center py-4">
               Services
               <ChevronDown className="ml-1" size={16} />
             </button>
             
             {isServicesOpen && (
-              <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2">
+              <div className="absolute top-full left-0 mt-0 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 group-hover:block">
                 {servicesDropdownItems.map((item, index) => (
                   <Link
                     key={index}
                     to={item.path}
-                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors"
+                    className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -139,7 +140,7 @@ const Header = () => {
           aria-label="Toggle menu"
         >
           {isMenuOpen ? (
-            <X className="text-gray-800\" size={24} />
+            <X className="text-gray-800" size={24} />
           ) : (
             <Menu className="text-gray-800" size={24} />
           )}
@@ -180,7 +181,7 @@ const Header = () => {
                     <Link
                       key={index}
                       to={item.path}
-                      className="block text-gray-600 hover:text-blue-900 transition-colors"
+                      className="block text-gray-600 hover:text-blue-900 transition-colors py-1"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
